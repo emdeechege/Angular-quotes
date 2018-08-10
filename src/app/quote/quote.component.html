@@ -14,12 +14,12 @@
           <h3>Memorable Quotes</h3>
         </div>
         <div class="row" *ngFor='let quote of quotes;let i = index'>
-<ul>
-        <li>  <h4 id="{{i}}" appHighlight>{{quote.name}} submitted on {{quote.completeDate|date}}</h4><li>
-        </ul>
-<div class="row">
-          <button class="btn btn-primary" (click)='toogleDetails(i)'>Quote Details</button>
-</div>
+
+          <h4 id="{{i}}" appHighlight>{{quote.name}}</h4>
+
+          <div class="row">
+            <button class="btn btn-primary" (click)='toogleDetails(i)'>Quote Details</button>
+          </div>
           <div class="row" *ngIf='quote.showDescription'>
 
             <app-quote-details [quote]='quote' (isComplete)='deleteQuote($event,i)'></app-quote-details>
