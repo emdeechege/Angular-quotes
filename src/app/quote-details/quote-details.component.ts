@@ -8,10 +8,10 @@ import {Quote} from '../quote'
 export class QuoteDetailsComponent implements OnInit {
 
 @Input() quote:Quote;
-@Output() isAdded= new EventEmitter<boolean>();
+@Output() isComplete= new EventEmitter<boolean>();
 
-quoteDelete(added:boolean) {
-  this.isAdded.emit(added);
+quoteDelete(complete:boolean) {
+  this.isComplete.emit(complete);
 }
 
   constructor() { }

@@ -15,20 +15,23 @@ quotes=[
 
 ]
 
-addNewIdea(idea) {
+addNewQuote(quote) {
 let quoteLength = this.quotes.length;
 quote.id = quoteLength+1;
-quote.addedDate = new Date(idea.completeDate)
-this.quotes.push(idea)
+quote.completeDate = new Date(quote.completeDate)
+this.quotes.push(quote)
 }
 
 deleteQuote(isComplete, index) {
-  if (isAdded) {
+  if (isComplete) {
     let toDelete = confirm(`Are you sure you want to delete ${this.quotes[index].name}`)
 
     if (toDelete) { this.quotes.splice(index, 1) }
   }
 }
+// toogleDetails(index) {
+//       this.quotes[index].showDescription = !this.quotes[index].showDescription;
+//     }
 
   constructor() { }
 

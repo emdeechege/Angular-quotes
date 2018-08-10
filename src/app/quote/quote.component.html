@@ -6,22 +6,22 @@
 
   <div class="container">
     <div class="row">
-      <div class="col-4">
-        <app-quote-form (addQuote)="addNewQuote($event)"></app-quote-form>
+      <div class="col-4" id="one">
+        <app-quote-form (addQuote)='addNewQuote($event)'></app-quote-form>
       </div>
-      <div class="col-8">
+      <div class="col-8" id="two">
         <div class="row">
           <h3>Memorable Quotes</h3>
         </div>
         <div class="row" *ngFor='let quote of quotes;let i = index'>
 
-          <h2 id="{{i}}" appHighlight>{{quote.author}} due on {{quote.addedDate|date}}</h2>
+          <h4 id="{{i}}" appHighlight>{{quote.name}} submitted on {{quote.completeDate|date}}</h4>
+<div class="row">
+          <!-- <button class="btn btn-primary" (click)='toogleDetails(i)'>Quote Details</button> -->
+</div>
+          <div class="row" *ngIf='quote.showDescription'>
 
-          <!-- <button class="btn btn-primary" (click)='toogleDetails(i)'>Toogle Details</button> -->
-
-          <div class="row" *ngIf="idea.showQuote">
-
-            <app-quote-details [quote]='quote' (isAdded)='deleteQuote($event,i)'></app-quote-details>
+            <app-quote-details [quote]='quote' (isComplete)='deleteQuote($event,i)'></app-quote-details>
           </div>
         </div>
 
