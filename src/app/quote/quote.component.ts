@@ -29,9 +29,9 @@ deleteQuote(isComplete, index) {
     if (toDelete) { this.quotes.splice(index, 1) }
   }
 }
-// toogleDetails(index) {
-//       this.quotes[index].showDescription = !this.quotes[index].showDescription;
-//     }
+toogleDetails(index) {
+      this.quotes[index].showDescription = !this.quotes[index].showDescription;
+    }
 
   constructor() { }
 
