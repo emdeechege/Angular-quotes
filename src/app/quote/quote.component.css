@@ -1,8 +1,8 @@
 .jumbotron {
   align-content: center;
-  background-color: brown;
-  text-align: center;
+    text-align: center;
   background-image: url('/assets/eight.jpg');
+  color: orange;
 }
 
 #one {
