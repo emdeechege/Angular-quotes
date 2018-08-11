@@ -8,15 +8,13 @@ import {Quote} from '../quote'
 })
 export class VoteComponent implements OnInit {
 
-  @Output() isComplete = new EventEmitter<boolean>();
+  @Output() isComplete = new EventEmitter<boolean>();//listens to button click to display results
 
-
-
-    uvotes = 0;
+    uvotes = 0;//starting point for votes
     dvotes = 0;
 
     upVote(){
-      this.uvotes = this.uvotes + 1;
+      this.uvotes = this.uvotes + 1;//adds one on mouse click
     }
 
     downVote(){
