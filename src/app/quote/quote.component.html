@@ -1,6 +1,4 @@
-
-
-  <div class="container">
+<div class="container">
   <div class="jumbotron">
     <h1 id="kik">Life Quotes!</h1>
     <h3 id="tit">Sharing memorable quotes</h3>
@@ -34,33 +32,30 @@
   </mat-card-actions>
 </mat-card>
         </div> -->
-        <!-- <div class="row" *ngFor='let quote of quotes;let i = index'>
+        <div class="row">
+          <div class="card" id="crd" *ngFor='let quote of quotes;let i = index'>
+            <div class="card-body">
+              <div class="card-title"><h5><strong>{{quote.name}}</strong></h5></div>
+              <p>{{quote.description}}</p>
 
-          <h4 id="{{i}}" appHighlight>{{quote.name}}</h4>
+              <!-- to show votes from vote app component + deleteQuote form dq details-->
+              <div class="card-footer" id="hut">
+                <div class="row">
+                  <div class="col-3">
+                <app-vote> </app-vote></div>
+                <div class="col-7" id="small">
+                <p>Submitted by {{quote.submitter}}, {{quote.completeDate|dateCount}} days ago</p>
+              </div>
+              <div class="col-2">
+                <app-quote-details [quote]='quote' (isComplete)='deleteQuote($event,i)'></app-quote-details></div>
+              </div>
+            </div>
 
-          <div class="row">
-            <button class="btn btn-primary" (click)='toogleDetails(i)'>Quote Details</button>
-          </div>
-          <div class="row" *ngIf='quote.showDescription'>
-
-            <app-quote-details [quote]='quote' (isComplete)='deleteQuote($event,i)'></app-quote-details>
-          </div>
-        </div> -->
-        <div class="card" style="width: 20rem;">
-          <div class="card-body" *ngFor='let quote of quotes;let i = index'>
-            <h5 class="card-title">{{quote.name}}</h5>
-            <p>{{quote.description}}</p>
-            <p>Submitted {{quote.completeDate|dateCount}} days ago</p>
-            <!-- to show votes from vote app component -->
-            <app-vote>  </app-vote>
-            <app-quote-details [quote]='quote' (isComplete)='deleteQuote($event,i)'></app-quote-details>
           </div>
         </div>
+
 
       </div>
 
 
     </div>
-
-
-  </div>
