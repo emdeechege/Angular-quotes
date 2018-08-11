@@ -10,7 +10,7 @@ export class HighlightDirective {
     this.highlight("highlight")
   }
   @HostListener("dblclick") onDoubleClicks() {
-    this.highlight("None")
+    this.highlight("highlight")
   }
   private highlight(highlight: string){
     this.elem.nativeElement.style.backgroundColor = 'yellow';

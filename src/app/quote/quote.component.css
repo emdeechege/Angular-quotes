@@ -20,13 +20,18 @@
 #crd {
   border: 1px;
   border-style: outset;
-  padding: 1px;
-  width: 800px;
+    width: 800px;
   margin-bottom: 10px;
 }
 
-/* #small {
+#small {
   font-variant: small-caps;
-  font-size: 10px;
-  float: right;
-} */
+  font-size: 13px;
+  }
+#ppp{
+  padding: 0.1;
+}
+
+#hut {
+  padding: 0;
+}
