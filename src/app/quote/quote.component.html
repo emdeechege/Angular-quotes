@@ -53,6 +53,7 @@
             <p>Submitted {{quote.completeDate|dateCount}} days ago</p>
             <!-- to show votes from vote app component -->
             <app-vote>  </app-vote>
+            <app-quote-details [quote]='quote' (isComplete)='deleteQuote($event,i)'></app-quote-details>
           </div>
         </div>
 
