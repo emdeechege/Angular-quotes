@@ -20,14 +20,14 @@
       </div>
       <!-- Date Input -->
       <div class="form-group">
-        <label for="complete">Date added</label>
+        <label for="complete">Date added</label><br>
         <input type='date' id="complete" [(ngModel)]="newQuote.completeDate" name="completeDate" #completeDate="ngModel" required>
         <div [hidden]="completeDate.valid || completeDate.pristine" class="alert alert-warning">
           <p> Quote Date is Required</p>
 
         </div>
       </div>
-      <button type="Submit" class="btn btn-success ">Add Quote</button>
+      <button type="Submit" class="btn btn-success ">Add Quote</button><br>
     </form>
   </div>
 </div>

@@ -12,7 +12,7 @@
         <app-quote-form (addQuote)='addNewQuote($event)'></app-quote-form>
       </div>
       <div class="col-8" id="two">
-        <div class="row">
+        <div class="row" id="lol">
           <h3>Memorable Quotes</h3>
         </div>
         <!-- <div class="row">
@@ -34,7 +34,7 @@
   </mat-card-actions>
 </mat-card>
         </div> -->
-        <div class="row" *ngFor='let quote of quotes;let i = index' id="">
+        <!-- <div class="row" *ngFor='let quote of quotes;let i = index'>
 
           <h4 id="{{i}}" appHighlight>{{quote.name}}</h4>
 
@@ -44,6 +44,15 @@
           <div class="row" *ngIf='quote.showDescription'>
 
             <app-quote-details [quote]='quote' (isComplete)='deleteQuote($event,i)'></app-quote-details>
+          </div>
+        </div> -->
+        <div class="card" style="width: 20rem;">
+          <div class="card-body" *ngFor='let quote of quotes;let i = index'>
+            <h5 class="card-title">{{quote.name}}</h5>
+            <p class="card-text" *ngIf='quote.showDescription'>{{description}}</p>
+            <!-- <like-box [numberOfLikes]="postLikes"
+                      (change)="onPostLikesUpdate($event)">
+            </like-box> -->
           </div>
         </div>
 
