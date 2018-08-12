@@ -13,7 +13,7 @@ export class VoteComponent implements OnInit {
     uvotes = 0;
     dvotes = 0;
 
-    upVote(highlight){
+    upVote(){
       this.uvotes = this.uvotes + 1;//adds one on mouse click
     }
 
