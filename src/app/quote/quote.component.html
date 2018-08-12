@@ -13,10 +13,28 @@
         <div class="row" id="lol">
           <h3>Memorable Quotes</h3>
         </div>
-
+        <!-- <div class="row">
+          <mat-card class="example-card">
+  <mat-card-header>
+    <div mat-card-avatar class="example-header-image"></div>
+    <mat-card-title>Nelson Mandela</mat-card-title>
+    <mat-card-subtitle>Posted</mat-card-subtitle>
+  </mat-card-header>
+  <img mat-card-image src="https://material.angular.io/assets/img/examples/shiba2.jpg" alt="Nelson Mandela">
+  <mat-card-content>
+    <p>
+      {{quote}}
+    </p>
+  </mat-card-content>
+  <mat-card-actions>
+    <button mat-button>LIKE</button>
+    <button mat-button>SHARE</button>
+  </mat-card-actions>
+</mat-card>
+        </div> -->
         <div class="row">
           <div class="card" id="crd" *ngFor='let quote of quotes;let i = index'>
-            <div class="card-body" id="ppp" id="{{i}}" appHighlight>
+            <div class="card-body" id="ppp">
               <div class="card-title"><h5><strong>{{quote.name}}</strong></h5></div>
               <p>{{quote.description}}</p>
 

@@ -5,33 +5,38 @@
   color: orange;
 }
 
-#one {
-  background-color: grey;
-}
-
 #two {
-  background-image: url('/assets/five.jpg');
+  background-image: url('/assets/huh.jpg');
 }
 
 #lol {
-    justify-content: center;
+  justify-content: center;
 }
 
 #crd {
   border: 1px;
   border-style: outset;
-    width: 800px;
+  width: 800px;
   margin-bottom: 10px;
 }
 
 #small {
   font-variant: small-caps;
   font-size: 13px;
-  }
-#ppp{
+}
+
+#ppp {
   padding: 0.1;
 }
 
 #hut {
   padding: 0;
+}
+
+#one {
+  align-content: center;
+  text-align: center;
+  background-image: url('/assets/free.jpg');
+  color: orange;
+  /* background-repeat: round; */
 }
