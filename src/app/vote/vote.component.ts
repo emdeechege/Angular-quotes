@@ -10,10 +10,10 @@ export class VoteComponent implements OnInit {
 
   @Output() isComplete = new EventEmitter<boolean>();//listens to button click to display results
 
-    uvotes = 0;//starting point for votes
+    uvotes = 0;//starting point for votes in two variables
     dvotes = 0;
 
-    upVote(){
+    upVote(highlight){
       this.uvotes = this.uvotes + 1;//adds one on mouse click
     }
 
