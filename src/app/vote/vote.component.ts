@@ -9,8 +9,8 @@ import {Quote} from '../quote'
 export class VoteComponent implements OnInit {
 
   @Output() isComplete = new EventEmitter<boolean>();//listens to button click to display results
-
-    uvotes = 0;//starting point for votes in two variables
+//starting point for votes in two variables with 0 as default
+    uvotes = 0;
     dvotes = 0;
 
     upVote(highlight){
@@ -18,7 +18,7 @@ export class VoteComponent implements OnInit {
     }
 
     downVote(){
-      this.dvotes = this.dvotes + 1;
+      this.dvotes = this.dvotes + 1;//adds one per mouse click
     }
 
   constructor() { }

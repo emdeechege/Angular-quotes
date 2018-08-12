@@ -15,7 +15,8 @@ export class QuoteComponent implements OnInit {
 
   ]
 
-showDescription= false;
+showDescription= false;//boolean setting to hide and display
+
 
   addNewQuote(quote) {
     let quoteLength = this.quotes.length;
@@ -26,13 +27,14 @@ showDescription= false;
 
     deleteQuote(isComplete, index) {
     if (isComplete) {
-      let toDelete = confirm(`Do you want to delete this Quote? ${this.quotes[index].name}`)
+      let toDelete = confirm(`Do you want to delete this Quote? ${this.quotes[index].name}`)//alert
 
-      if (toDelete) { this.quotes.splice(index, 1) }
+      if (toDelete) { this.quotes.splice(index, 1) }//removes quote
     }
   }
+
   toggleQuote() {
-    this.showDescription = !this.showDescription;
+    this.showDescription = !this.showDescription;//show or hide content
   }
 
 
